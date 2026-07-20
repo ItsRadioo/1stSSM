@@ -143,9 +143,11 @@ button {
 }
 
 .brand-logo {
-  width: 80px;
-  height: auto;
-  dispaly: block;
+    width: 50px !important;
+    max-width: 50px !important;
+    height: auto !important;
+    display: block;
+    flex-shrink: 0;
 }
 
 .brand-logo-fallback {
