@@ -46,3 +46,9 @@ July 2026 update:
 - Added Uniforms to the main navigation and footer.
 - Every Join button now opens the official MyScouts registration entry:
   https://www.myscouts.ca/join
+
+
+Colour correction:
+- Restored exact original palette from the earlier website.
+- Renamed the active stylesheet to css/site.css and added a version query to prevent browser/GitHub Pages cache from showing the old palette.
+- Restyled the Uniforms dropdown to match the site cards, buttons and red/green branding.
