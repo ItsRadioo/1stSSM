@@ -1,59 +1,91 @@
+"use strict";
+
+/**
+ * Mobile navigation
+ */
 const menuButton = document.querySelector("#menuButton");
-const navigation = document.querySelector("#siteNav");
+const siteNav = document.querySelector("#siteNav");
 
-if (menuButton && navigation) {
+if (menuButton && siteNav) {
   menuButton.addEventListener("click", () => {
-    const open = navigation.classList.toggle("is-open");
-    menuButton.setAttribute("aria-expanded", String(open));
-  });
+    const isExpanded =
+      menuButton.getAttribute("aria-expanded") === "true";
 
-  navigation.addEventListener("click", event => {
-    if (event.target instanceof HTMLAnchorElement) {
-      navigation.classList.remove("is-open");
-      menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute(
+      "aria-expanded",
+      String(!isExpanded)
+    );
+
+    siteNav.classList.toggle("is-open", !isExpanded);
+
+    const menuText =
+      menuButton.querySelector(".sr-only");
+
+    if (menuText) {
+      menuText.textContent =
+        isExpanded
+          ? "Open navigation menu"
+          : "Close navigation menu";
     }
   });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 860) {
-      navigation.classList.remove("is-open");
+  siteNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
       menuButton.setAttribute("aria-expanded", "false");
-    }
-  });
-}
+      siteNav.classList.remove("is-open");
 
-const year = document.querySelector("#year");
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
+      const menuText =
+        menuButton.querySelector(".sr-only");
 
-const contactForm = document.querySelector("#contactForm");
-const formStatus = document.querySelector("#formStatus");
-
-if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", event => {
-    event.preventDefault();
-    formStatus.hidden = false;
-    formStatus.textContent =
-      "This demonstration form is ready to connect to your preferred email or form service.";
-    contactForm.reset();
-  });
-}
-
-
-const uniformSection = document.querySelector("#uniformSection");
-const uniformPanels = document.querySelectorAll("[data-uniform-panel]");
-
-if (uniformSection && uniformPanels.length) {
-  const showUniformPanel = value => {
-    uniformPanels.forEach(panel => {
-      panel.hidden = panel.dataset.uniformPanel !== value;
+      if (menuText) {
+        menuText.textContent = "Open navigation menu";
+      }
     });
-  };
-
-  uniformSection.addEventListener("change", () => {
-    showUniformPanel(uniformSection.value);
   });
+}
 
+/**
+ * Current copyright year
+ */
+const yearElement = document.querySelector("#year");
+
+if (yearElement) {
+  yearElement.textContent =
+    String(new Date().getFullYear());
+}
+
+/**
+ * Uniform-section selector
+ */
+const uniformSection =
+  document.querySelector("#uniformSection");
+
+const uniformPanels =
+  document.querySelectorAll("[data-uniform-panel]");
+
+function showUniformPanel(sectionName) {
+  uniformPanels.forEach(panel => {
+    const isSelected =
+      panel.dataset.uniformPanel === sectionName;
+
+    panel.hidden = !isSelected;
+  });
+}
+
+if (uniformSection && uniformPanels.length > 0) {
   showUniformPanel(uniformSection.value);
+
+  uniformSection.addEventListener("change", event => {
+    showUniformPanel(event.target.value);
+
+    const visiblePanel = document.querySelector(
+      `[data-uniform-panel="${event.target.value}"]`
+    );
+
+    if (visiblePanel) {
+      visiblePanel.focus({
+        preventScroll: true
+      });
+    }
+  });
 }
