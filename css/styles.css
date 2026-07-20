@@ -143,8 +143,8 @@ button {
 }
 
 .brand-logo {
-    width: 180px !important;
-    max-width: 180px !important;
+    width: 220px !important;
+    max-width: 220px !important;
     height: auto !important;
     display: block;
     flex-shrink: 0;
