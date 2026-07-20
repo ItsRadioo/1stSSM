@@ -14,12 +14,31 @@
     <div class="login-card">
       <a class="brand" href="index.html"><span class="brand-mark">1st</span><span><strong>Website Administration</strong><small>1st Sault Ste. Marie Scout Group</small></span></a>
       <p class="eyebrow dark top-space">Authorized users only</p><h1>Sign in</h1><p>Accounts must be created manually by the Firebase project owner.</p>
-      <form id="loginForm" class="stack">
-        <label>Email<input id="loginEmail" type="email" autocomplete="username" required></label>
-        <label>Password<input id="loginPassword" type="password" autocomplete="current-password" required></label>
-        <button class="button" type="submit">Sign in</button>
-        <button id="forgotBtn" class="text-btn" type="button">Forgot password?</button>
-      </form>
+      <form id="login-form" class="stack">
+    <label>Email <input id="login-email" type="email" autocomplete="username" required> </label>
+
+    <label>
+        Password
+        <input
+            id="login-password"
+            type="password"
+            autocomplete="current-password"
+            required
+        >
+    </label>
+
+    <button class="button" type="submit">
+        Sign in
+    </button>
+
+    <button
+        id="forgot-password"
+        class="text-btn"
+        type="button"
+    >
+        Forgot password?
+    </button>
+</form>
       <p id="loginMessage" class="message" role="alert"></p><a href="index.html">← Return to website</a>
     </div>
   </section>
