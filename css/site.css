@@ -632,21 +632,38 @@ select {
 }
 
 .cta {
-  padding: 52px;
-  border-radius: var(--radius);
-  color: var(--white);
-  background:
-    linear-gradient(120deg, rgba(15, 43, 34, 0.98), rgba(24, 63, 50, 0.9)),
-    var(--forest);
-  box-shadow: var(--shadow);
+    padding: 52px;
+    border-radius: var(--radius);
+    color: var(--white);
+    background:
+        linear-gradient(135deg,#0d3b2a,#174c35);
+    box-shadow: var(--shadow);
 }
 
-.cta p {
-  max-width: 720px;
-  margin: 20px 0 0;
-  color: rgba(255, 255, 255, 0.82);
+.cta h2{
+    color:#ffffff !important;
 }
 
+.cta .eyebrow{
+    color:#f5e6b3;
+}
+
+.cta p{
+    max-width:720px;
+    margin:20px 0 0;
+    color:rgba(255,255,255,.92);
+}
+
+.cta .button-outline{
+    color:#ffffff;
+    border-color:rgba(255,255,255,.75);
+}
+
+.cta .button-outline:hover{
+    color:var(--forest-dark);
+    background:#ffffff;
+    border-color:#ffffff;
+}
 .page-hero {
   padding-block: 110px 90px;
   color: var(--white);
