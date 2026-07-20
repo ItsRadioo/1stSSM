@@ -39,3 +39,21 @@ if (contactForm && formStatus) {
     contactForm.reset();
   });
 }
+
+
+const uniformSection = document.querySelector("#uniformSection");
+const uniformPanels = document.querySelectorAll("[data-uniform-panel]");
+
+if (uniformSection && uniformPanels.length) {
+  const showUniformPanel = value => {
+    uniformPanels.forEach(panel => {
+      panel.hidden = panel.dataset.uniformPanel !== value;
+    });
+  };
+
+  uniformSection.addEventListener("change", () => {
+    showUniformPanel(uniformSection.value);
+  });
+
+  showUniformPanel(uniformSection.value);
+}
