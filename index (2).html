@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Adventure, leadership and community with the 1st Sault Ste. Marie Scout Group.">
+  <title>1st Sault Ste. Marie Scout Group</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/public.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-row">
+
+    <a class="brand" href="#home">
+
+      <img
+        class="brand-logo"
+        src="images/logo.jpg"
+        alt="1st Sault Ste. Marie Scout Group Logo">
+
+      <span>
+        <strong id="brandName">
+          1st Sault Ste. Marie Scout Group
+        </strong>
+
+        <small>
+          Scouts Canada Group
+        </small>
+      </span>
+
+    </a>
+
+    <button
+      id="menuBtn"
+      class="menu-btn"
+      aria-expanded="false"
+      aria-controls="nav">
+
+      ☰
+
+      <span class="sr-only">
+        Menu
+      </span>
+
+    </button>
+
+    <nav id="nav" class="nav">
+      <a href="#about">About</a>
+      <a href="#sections">Sections</a>
+      <a href="#events">Events</a>
+      <a href="#apple-day">Apple Day</a>
+      <a href="#contact">Contact</a>
+
+      <a
+        id="donateNav"
+        class="button button-small"
+        href="#apple-day">
+
+        Donate
+
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker">1st Sault Ste. Marie Scout Group</p>
+
+        <h1 id="heroTitle">
+          Adventure<br>
+          Leadership<br>
+          Community
+        </h1>
+
+        <div class="brush-divider" aria-hidden="true"></div>
+
+        <p id="heroSubtitle">
+          Empowering young people in Sault Ste. Marie with skills for life through fun, friendship and adventure.
+        </p>
+
+        <div class="hero-actions">
+          <a id="heroButton" class="button hero-primary" href="#sections">
+            Discover our group
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="video-link" href="#about">
+            <span class="play-icon" aria-hidden="true">▶</span>
+            Learn about Scouting
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-badge" aria-hidden="true">
+        <span>Scouting builds</span>
+        <strong>⚜</strong>
+        <span>A better world</span>
+      </div>
+    </div>
+
+    <div class="hero-edge" aria-hidden="true"></div>
+  </section>
+
+  <section id="announcement" class="announcement" hidden>
+    <div class="container announcement-inner">
+      <strong id="announcementTitle"></strong>
+      <span id="announcementText"></span>
+    </div>
+  </section>
+
+  <section id="about" class="benefits-section">
+    <div class="container benefits-grid">
+
+      <article class="benefit-card">
+        <div class="benefit-icon" aria-hidden="true">⛰</div>
+        <h2>Outdoor Adventure</h2>
+        <p>Camping, hiking and exploring build confidence and resilience.</p>
+      </article>
+
+      <article class="benefit-card">
+        <div class="benefit-icon" aria-hidden="true">⌖</div>
+        <h2>Life Skills</h2>
+        <p>Young people develop practical skills they can use throughout life.</p>
+      </article>
+
+      <article class="benefit-card">
+        <div class="benefit-icon" aria-hidden="true">♨</div>
+        <h2>Leadership</h2>
+        <p>Youth take on challenges, make decisions and become leaders.</p>
+      </article>
+
+      <article class="benefit-card">
+        <div class="benefit-icon" aria-hidden="true">🤝</div>
+        <h2>Community</h2>
+        <p>We give back, support others and make our community stronger.</p>
+      </article>
+
+      <article class="benefit-card">
+        <div class="benefit-icon benefit-heart" aria-hidden="true">♥</div>
+        <h2>Fun &amp; Friendship</h2>
+        <p>Lifelong memories and friendships are made through shared adventures.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container about-layout">
+      <div>
+        <p class="eyebrow">About our group</p>
+        <h2 id="aboutTitle">Scouting in Sault Ste. Marie</h2>
+      </div>
+
+      <div>
+        <p id="aboutText">
+          The 1st Sault Ste. Marie Scout Group provides youth with opportunities to learn, lead, serve and explore in a welcoming environment.
+        </p>
+
+        <a class="text-link" href="#sections">
+          Explore our sections
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sections" class="section sections-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Find your section</p>
+          <h2>A place for every stage</h2>
+        </div>
+
+        <p>
+          From first adventures to youth leadership and adult volunteering, there is a place for everyone in Scouting.
+        </p>
+      </div>
+
+      <div id="sectionsGrid" class="cards sections-grid">
+        <p class="empty">Loading sections…</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="apple-day" class="apple-section">
+    <div class="container apple-card">
+
+      <div class="apple-copy">
+        <p class="eyebrow red">Our annual fundraiser</p>
+
+        <div class="apple-title-row">
+          <h2 id="appleTitle">Apple Day</h2>
+          <span class="apple-symbol" aria-hidden="true">🍎</span>
+        </div>
+
+        <p id="appleDescription">
+          Apple Day is a Canadian Scouting tradition where our youth accept donations and offer an apple as a small token of appreciation.
+        </p>
+
+        <p>
+          Your support helps provide affordable programs, equipment, camps and adventures for local youth.
+        </p>
+
+        <a class="button apple-learn-button" href="#contact">
+          Learn more about Apple Day
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="apple-photo" role="img" aria-label="Scout holding apples during an Apple Day fundraiser"></div>
+
+      <aside class="apple-details">
+        <div class="apple-detail">
+          <span class="detail-icon" aria-hidden="true">▣</span>
+          <div>
+            <span class="detail-label">Date and time</span>
+            <strong id="appleDate">To be announced</strong>
+          </div>
+        </div>
+
+        <div class="apple-detail">
+          <span class="detail-icon" aria-hidden="true">●</span>
+          <div>
+            <span class="detail-label">Find us at</span>
+            <strong id="appleLocation">Sault Ste. Marie</strong>
+          </div>
+        </div>
+
+        <a class="button apple-details-button" href="#contact">View all details</a>
+      </aside>
+
+    </div>
+  </section>
+
+  <section class="fundraising-banner">
+    <div class="container fundraising-layout">
+
+      <div class="thank-you">
+        <strong>Thank you</strong>
+        <p>Your support makes a big difference.</p>
+      </div>
+
+      <div class="fundraising-progress">
+        <p class="fundraising-label">Apple Day goal</p>
+
+        <div class="fundraising-total">
+          <strong id="goal">$5,000</strong>
+        </div>
+
+        <div id="progressTrack" class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Apple Day fundraising progress">
+          <span id="progressBar"></span>
+        </div>
+
+        <div class="progress-labels">
+          <span><strong id="raised">$0</strong> raised</span>
+          <span id="progressPercent">0% of goal</span>
+        </div>
+      </div>
+
+      <div class="fundraising-donate">
+        <p>Secure online donations support local youth.</p>
+
+        <a id="appleDonate" class="button donate-light" href="#contact">
+          <span aria-hidden="true">♡</span>
+          Donate now
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="gallery-strip" aria-label="Scouting activities">
+
+    <article class="gallery-item gallery-camp">
+      <span>Camp</span>
+    </article>
+
+    <article class="gallery-item gallery-explore">
+      <span>Explore</span>
+    </article>
+
+    <article class="gallery-item gallery-learn">
+      <span>Learn</span>
+    </article>
+
+    <article class="gallery-item gallery-belong">
+      <span>Belong</span>
+    </article>
+
+  </section>
+
+  <section id="events" class="section events-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">What's happening</p>
+          <h2>Upcoming events</h2>
+        </div>
+
+        <p>See what our sections and group have planned next.</p>
+      </div>
+
+      <div id="eventsGrid" class="cards events-grid">
+        <p class="empty">Loading events…</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="container newsletter-layout">
+
+      <div class="newsletter-heading">
+        <span class="newsletter-icon" aria-hidden="true">✉</span>
+
+        <div>
+          <h2>Stay in the loop</h2>
+          <p>Get group updates, event information and more.</p>
+        </div>
+      </div>
+
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="newsletterEmail">Email address</label>
+        <input id="newsletterEmail" type="email" autocomplete="email" placeholder="Enter your email address" required>
+        <button class="button" type="submit">Subscribe</button>
+      </form>
+
+      <div class="social-block">
+        <strong>Follow us</strong>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a id="footerEmailIcon" href="#" aria-label="Email">✉</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container contact-layout">
+
+      <div class="footer-brand">
+        <div class="footer-logo">1st</div>
+
+        <div>
+          <strong id="footerName">1st Sault Ste. Marie Scout Group</strong>
+          <span>A Scouts Canada Group</span>
+          <small>It starts with Scouts.</small>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h2>Quick links</h2>
+        <a href="#about">About Us</a>
+        <a href="#sections">Sections</a>
+        <a href="#apple-day">Apple Day</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Volunteer</a>
+        <a href="#apple-day">Donate</a>
+      </div>
+
+      <div class="footer-column">
+        <h2>Contact us</h2>
+
+        <p id="phoneRow" hidden>
+          <span aria-hidden="true">☎</span>
+          <a id="contactPhone"></a>
+        </p>
+
+        <p>
+          <span aria-hidden="true">✉</span>
+          <a id="contactEmail" href="#">Not yet added</a>
+        </p>
+
+        <p>
+          <span aria-hidden="true">●</span>
+          <span id="contactLocation">Sault Ste. Marie, Ontario</span>
+        </p>
+      </div>
+
+      <div class="footer-column acknowledgement">
+        <h2>Acknowledgement</h2>
+        <p>
+          We respectfully acknowledge that we meet on the traditional lands of the Anishinaabe people. We are grateful for the opportunity to live, learn and play on these lands.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> 1st Sault Ste. Marie Scout Group. All rights reserved.</p>
+
+    <p>
+      <a href="#">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="#">Accessibility</a>
+      <span aria-hidden="true">|</span>
+      <a href="admin.html">Administrator login</a>
+    </p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+</body>
+</html>
