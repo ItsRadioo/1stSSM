@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn(){ return request.auth != null; }
+    function profileExists(){ return signedIn() && exists(/databases/$(database)/documents/users/$(request.auth.uid)); }
+    function profile(){ return get(/databases/$(database)/documents/users/$(request.auth.uid)).data; }
+    function active(){ return profileExists() && profile().active == true; }
+    function canEdit(){ return active() && profile().role in ["owner","administrator","editor"]; }
+    function isAdmin(){ return active() && profile().role in ["owner","administrator"]; }
+    match /settings/{id} { allow read: if true; allow create,update: if canEdit(); allow delete: if isAdmin(); }
+    match /siteContent/{id} { allow read: if true; allow create,update: if canEdit(); allow delete: if isAdmin(); }
+    match /sections/{id} { allow read: if true; allow create,update: if canEdit(); allow delete: if isAdmin(); }
+    match /announcements/{id} { allow read: if true; allow create,update: if canEdit(); allow delete: if isAdmin(); }
+    match /events/{id} { allow read: if true; allow create,update: if canEdit(); allow delete: if isAdmin(); }
+    match /gallery/{id} { allow read: if true; allow create,update: if canEdit(); allow delete: if isAdmin(); }
+    match /users/{id} { allow read: if signedIn() && request.auth.uid == id; allow write: if false; }
+    match /activityLog/{id} { allow read: if isAdmin(); allow create: if canEdit(); allow update,delete: if false; }
+    match /{document=**} { allow read,write: if false; }
+  }
+}

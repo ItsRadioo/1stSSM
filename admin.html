@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Website Administration | 1st Sault Scouts</title>
+  <link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/admin.css">
+  <script type="module" src="js/admin.js"></script>
+</head>
+<body class="admin-body">
+<a class="skip-link" href="#adminMain">Skip to main content</a>
+<main id="adminMain">
+  <section id="loginView" class="login-shell">
+    <div class="login-card">
+      <a class="brand" href="index.html"><span class="brand-mark">1st</span><span><strong>Website Administration</strong><small>1st Sault Ste. Marie Scout Group</small></span></a>
+      <p class="eyebrow dark top-space">Authorized users only</p><h1>Sign in</h1><p>Accounts must be created manually by the Firebase project owner.</p>
+      <form id="loginForm" class="stack">
+        <label>Email<input id="loginEmail" type="email" autocomplete="username" required></label>
+        <label>Password<input id="loginPassword" type="password" autocomplete="current-password" required></label>
+        <button class="button" type="submit">Sign in</button>
+        <button id="forgotBtn" class="text-btn" type="button">Forgot password?</button>
+      </form>
+      <p id="loginMessage" class="message" role="alert"></p><a href="index.html">← Return to website</a>
+    </div>
+  </section>
+  <section id="dashboardView" class="dashboard" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">1st</span><span><strong>Site Admin</strong><small id="roleText">Loading…</small></span></a>
+      <nav id="adminNav">
+        <button class="nav-item active" data-panel="overview">Overview</button>
+        <button class="nav-item" data-panel="homepage">Homepage</button>
+        <button class="nav-item" data-panel="appleday">Apple Day</button>
+        <button class="nav-item" data-panel="sections">Sections</button>
+        <button class="nav-item" data-panel="announcements">Announcements</button>
+        <button class="nav-item" data-panel="events">Events</button>
+        <button class="nav-item" data-panel="settings">Contact & settings</button>
+        <button class="nav-item" data-panel="account">My account</button>
+      </nav>
+      <button id="signOutBtn" class="button button-outline-light signout">Sign out</button>
+    </aside>
+    <div class="workspace">
+      <header class="admin-top"><div><p class="eyebrow dark">Website administration</p><h1 id="panelTitle">Overview</h1></div><div><span id="signedInName"></span> <a class="button button-small" target="_blank" href="index.html">View website</a></div></header>
+      <div id="adminMessage" class="admin-message" role="status"></div>
+      <section class="panel active" data-panel-content="overview">
+        <div class="stats"><article><strong id="statSections">—</strong><span>Active sections</span></article><article><strong id="statEvents">—</strong><span>Published events</span></article><article><strong id="statAnnouncements">—</strong><span>Announcements</span></article><article><strong id="statRaised">—</strong><span>Apple Day raised</span></article></div>
+        <div class="admin-card"><h2>Welcome</h2><p>Use the menu to update the public website. Changes are saved directly to Cloud Firestore.</p><p><strong>User accounts and roles remain managed manually in Firebase Console.</strong></p></div>
+      </section>
+      <section class="panel" data-panel-content="homepage"><form id="homepageForm" class="admin-card form-grid"><h2>Homepage content</h2>
+        <label>Hero title<input id="homeHeroTitle" required maxlength="90"></label><label>Button text<input id="homeHeroButton" maxlength="40"></label>
+        <label class="full">Hero subtitle<textarea id="homeHeroSubtitle" rows="3" maxlength="300"></textarea></label>
+        <label>About heading<input id="homeAboutTitle" maxlength="100"></label><label class="full">About description<textarea id="homeAboutText" rows="5" maxlength="700"></textarea></label>
+        <div class="full actions-right"><button class="button">Save homepage</button></div></form></section>
+      <section class="panel" data-panel-content="appleday"><form id="appleForm" class="admin-card form-grid"><h2>Apple Day</h2>
+        <label>Heading<input id="appleAdminTitle"></label><label>Date text<input id="appleAdminDate" placeholder="October 3, 2026"></label>
+        <label>Location<input id="appleAdminLocation"></label><label>Donation URL<input id="appleAdminUrl" type="url" placeholder="https://..."></label>
+        <label>Amount raised<input id="appleAdminRaised" type="number" min="0" step="0.01"></label><label>Goal<input id="appleAdminGoal" type="number" min="1" step="0.01"></label>
+        <label class="full">Description<textarea id="appleAdminDescription" rows="5"></textarea></label><div class="full actions-right"><button class="button">Save Apple Day</button></div></form></section>
+      <section class="panel" data-panel-content="sections"><div class="admin-card"><div class="card-head"><div><h2>Sections</h2><p>Edit your existing section documents.</p></div></div><div id="sectionsList" class="editor-list"></div></div></section>
+      <section class="panel" data-panel-content="announcements"><div class="admin-card"><div class="card-head"><div><h2>Announcements</h2><p>The newest published item appears on the public site.</p></div><button id="newAnnouncement" class="button button-small">New announcement</button></div><div id="announcementsList" class="editor-list"></div></div></section>
+      <section class="panel" data-panel-content="events"><div class="admin-card"><div class="card-head"><div><h2>Events</h2><p>Published future events appear on the homepage.</p></div><button id="newEvent" class="button button-small">New event</button></div><div id="eventsList" class="editor-list"></div></div></section>
+      <section class="panel" data-panel-content="settings"><form id="settingsForm" class="admin-card form-grid"><h2>Contact and settings</h2>
+        <label>Group name<input id="settingsGroupName"></label><label>Public email<input id="settingsEmail" type="email"></label>
+        <label>Phone<input id="settingsPhone" type="tel"></label><label>Meeting location<input id="settingsLocation"></label>
+        <label>City<input id="settingsCity"></label><label>Province<input id="settingsProvince"></label>
+        <div class="full actions-right"><button class="button">Save settings</button></div></form></section>
+      <section class="panel" data-panel-content="account"><form id="passwordForm" class="admin-card form-grid"><h2>Change password</h2>
+        <label>Current password<input id="currentPassword" type="password" required></label><label>New password<input id="newPassword" type="password" minlength="8" required></label>
+        <label>Confirm new password<input id="confirmPassword" type="password" minlength="8" required></label><div class="full actions-right"><button class="button">Change password</button></div></form></section>
+    </div>
+  </section>
+</main>
+<dialog id="editorDialog"><form id="editorForm" method="dialog" class="dialog-card"><div class="card-head"><h2 id="dialogTitle">Edit</h2><button class="icon-btn" value="cancel" aria-label="Close">×</button></div><div id="dialogFields" class="stack"></div><div class="actions-right"><button class="button button-secondary" value="cancel">Cancel</button><button id="dialogSave" class="button" value="default">Save</button></div></form></dialog>
+</body>
+</html>

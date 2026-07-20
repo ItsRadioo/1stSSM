@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="1st Sault Ste. Marie Scout Group">
+  <title>1st Sault Ste. Marie Scout Group</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/public.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="#home">
+      <span class="brand-mark">1st</span>
+      <span><strong id="brandName">1st Sault Ste. Marie Scout Group</strong><small>Scouts Canada Group</small></span>
+    </a>
+    <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="nav">☰<span class="sr-only">Menu</span></button>
+    <nav id="nav" class="nav">
+      <a href="#about">About</a><a href="#sections">Sections</a><a href="#events">Events</a>
+      <a href="#apple-day">Apple Day</a><a href="#contact">Contact</a>
+      <a id="donateNav" class="button button-small" href="#apple-day">Donate</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Adventure • Leadership • Community</p>
+      <h1 id="heroTitle">Adventure starts here.</h1>
+      <p id="heroSubtitle">Helping young people build confidence, friendships and skills through meaningful adventures.</p>
+      <div class="actions"><a id="heroButton" class="button button-light" href="#sections">Explore our sections</a><a class="button button-outline-light" href="#contact">Contact us</a></div>
+    </div>
+  </section>
+  <section id="announcement" class="announcement" hidden>
+    <div class="container"><strong id="announcementTitle"></strong> <span id="announcementText"></span></div>
+  </section>
+  <section id="about" class="section">
+    <div class="container split">
+      <div><p class="eyebrow dark">About our group</p><h2 id="aboutTitle">Scouting in Sault Ste. Marie</h2><p id="aboutText">The 1st Sault Ste. Marie Scout Group provides youth with opportunities to learn, lead, serve and explore in a welcoming environment.</p></div>
+      <div class="feature-grid">
+        <article><span>⌁</span><h3>Outdoor adventure</h3><p>Camping, hiking and hands-on experiences.</p></article>
+        <article><span>◇</span><h3>Life skills</h3><p>Confidence, teamwork and practical learning.</p></article>
+        <article><span>♡</span><h3>Community</h3><p>Service, friendship and active citizenship.</p></article>
+        <article><span>✦</span><h3>Youth leadership</h3><p>Increasing responsibility at every age.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="sections" class="section muted">
+    <div class="container">
+      <div class="section-head"><div><p class="eyebrow dark">Find your section</p><h2>A place for every stage</h2></div><p>Section details are loaded from Firebase and can be updated in the administration dashboard.</p></div>
+      <div id="sectionsGrid" class="cards"><p class="empty">Loading sections…</p></div>
+    </div>
+  </section>
+  <section id="events" class="section">
+    <div class="container"><div class="section-head"><div><p class="eyebrow dark">What's happening</p><h2>Upcoming events</h2></div></div><div id="eventsGrid" class="cards"><p class="empty">Loading events…</p></div></div>
+  </section>
+  <section id="apple-day" class="section apple">
+    <div class="container split">
+      <div><p class="eyebrow dark">Annual fundraiser</p><h2 id="appleTitle">Apple Day</h2><p id="appleDescription">Apple Day is a long-standing Scouting tradition that helps fund local programming, equipment and camps.</p>
+      <div class="detail-grid"><div><strong>Date</strong><span id="appleDate">To be announced</span></div><div><strong>Location</strong><span id="appleLocation">Sault Ste. Marie</span></div></div>
+      <a id="appleDonate" class="button" href="#contact">Support Apple Day</a></div>
+      <aside class="progress-card"><p class="eyebrow dark">Campaign progress</p><h3>Help us reach our goal</h3><div id="progressTrack" class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressBar"></span></div><div class="progress-labels"><span><strong id="raised">$0</strong> raised</span><span>Goal <strong id="goal">$5,000</strong></span></div></aside>
+    </div>
+  </section>
+  <section id="contact" class="section contact">
+    <div class="container split">
+      <div><p class="eyebrow">Get in touch</p><h2>Ready for the next adventure?</h2><p>Ask about programs, registration, volunteering or upcoming activities.</p></div>
+      <div class="contact-card"><p><strong>Email</strong><br><a id="contactEmail" href="#">Not yet added</a></p><p><strong>Meeting location</strong><br><span id="contactLocation">Sault Ste. Marie, Ontario</span></p><p id="phoneRow" hidden><strong>Phone</strong><br><a id="contactPhone"></a></p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-row"><p>© <span id="year"></span> <span id="footerName">1st Sault Ste. Marie Scout Group</span></p><p><a href="admin.html">Administrator login</a> · <a href="#home">Back to top</a></p></div></footer>
+</body>
+</html>
