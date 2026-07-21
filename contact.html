@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Contact the 1st Sault Ste. Marie Scout Group by email or telephone.">
+    content="Contact the leadership team of the 1st Sault Ste. Marie Scout Group.">
 
   <title>Contact | 1st Sault Ste. Marie Scout Group</title>
 
@@ -17,54 +17,92 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/site.css?v=20260721-1">
+  <link rel="stylesheet" href="css/site.css?v=20260721-2">
 
   <style>
-    .contact-options {
+    .contact-directory {
       display: grid;
-      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
-    .contact-option {
+    .contact-card {
+      display: flex;
+      flex-direction: column;
       padding: 1.75rem;
       background: #ffffff;
       border: 1px solid rgba(0, 0, 0, 0.12);
       border-radius: 0.75rem;
+      box-shadow: 0 0.4rem 1.4rem rgba(0, 0, 0, 0.06);
     }
 
-    .contact-option h2 {
-      margin-top: 0;
-      margin-bottom: 0.6rem;
-      font-size: 1.35rem;
+    .contact-card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.4rem;
     }
 
-    .contact-option p {
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-    .contact-value {
-      display: block;
-      margin-bottom: 1.25rem;
-      font-size: 1.1rem;
+    .contact-name {
+      margin: 0 0 1.25rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      overflow-wrap: anywhere;
     }
 
-    .contact-note {
-      margin-top: 1.5rem;
-      padding: 1.25rem;
-      background: rgba(0, 0, 0, 0.04);
-      border-left: 0.3rem solid currentColor;
+    .contact-details {
+      display: grid;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
     }
 
-    .contact-note p {
+    .contact-detail {
       margin: 0;
     }
 
-    @media (min-width: 700px) {
-      .contact-options {
+    .contact-detail strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-detail a {
+      overflow-wrap: anywhere;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+
+    .contact-actions .button {
+      text-align: center;
+    }
+
+    .contact-guidance {
+      margin-top: 2rem;
+      padding: 1.75rem;
+      background: rgba(0, 0, 0, 0.04);
+      border-left: 0.35rem solid currentColor;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .contact-guidance h2 {
+      margin-top: 0;
+      margin-bottom: 0.65rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-guidance p {
+      margin-bottom: 0;
+    }
+
+    .response-note {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    @media (min-width: 760px) {
+      .contact-directory {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
@@ -138,11 +176,11 @@
     <div class="container">
       <p class="kicker">Contact us</p>
 
-      <h1>Speak with<br>our group</h1>
+      <h1>Connect with<br>our leadership team</h1>
 
       <p>
-        Contact a member of the 1st Sault Ste. Marie Scout Group with questions
-        about registration, volunteering, meetings or group activities.
+        Contact the 1st Sault Ste. Marie Scout Group with questions about
+        registration, volunteering, meetings, events or community partnerships.
       </p>
     </div>
   </section>
@@ -151,63 +189,214 @@
     <div class="container content-shell">
 
       <div>
+
         <div class="section-heading">
-          <p class="eyebrow">Contact information</p>
-          <h2>Choose how you would like to reach us</h2>
+          <p class="eyebrow">Group contacts</p>
+          <h2>Speak with someone from our group</h2>
 
           <p>
-            Use the email address or phone number below to contact someone from
-            the group directly.
+            Use the contact information below to reach the appropriate member
+            of our volunteer leadership team.
           </p>
         </div>
-<!---
-==================================================
-CONTACT CARD TEMPLATE
-Copy this block when adding another contact.
-==================================================
---->
-<section class="contact-option">
 
-    <h2>Group Commissioner</h2>
+        <div class="contact-directory">
 
-    <p><strong>Neil Mclean</strong></p>
+          <!-- GROUP COMMISSIONER -->
 
-    <p>
-        <strong>Email:</strong>
-        <a href="mailto:EMAIL">
-            mcmadmac@gmail.com
-        </a>
-    </p>
+          <section
+            class="contact-card"
+            aria-labelledby="commissioner-heading">
 
-    <p>
-        <strong>Phone:</strong>
-        <a href="tel:+1##########">
-            PHONE
-        </a>
-    </p>
+            <h2 id="commissioner-heading">
+              Group Commissioner
+            </h2>
 
-    <div class="contact-actions">
-        <a class="button" href="mailto:EMAIL">
-            Send Email
-        </a>
+            <p class="contact-name">
+              PLACE_HOLDER
+            </p>
 
-        <a class="button button-outline" href="tel:+1##########">
-            Call
-        </a>
-    </div>
+            <div class="contact-details">
 
-</section>
-        <div class="contact-options">
+              <p class="contact-detail">
+                <strong>Email</strong>
 
-        
+                <a href="mailto:YOUR_EMAIL_ADDRESS">
+                  YOUR_EMAIL_ADDRESS
+                </a>
+              </p>
+
+              <p class="contact-detail">
+                <strong>Phone</strong>
+
+                <a href="tel:+17050000000">
+                  (705) 000-0000
+                </a>
+              </p>
+
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="button"
+                href="mailto:YOUR_EMAIL_ADDRESS">
+                Send Email
+              </a>
+
+              <a
+                class="button button-outline"
+                href="tel:+17050000000">
+                Call
+              </a>
+            </div>
+
+          </section>
+
+          <!--
+          ==================================================
+          REGISTRAR
+
+          Remove the opening and closing comment markers
+          around this section when the information is ready.
+          ==================================================
+
+          <section
+            class="contact-card"
+            aria-labelledby="registrar-heading">
+
+            <h2 id="registrar-heading">
+              Registrar
+            </h2>
+
+            <p class="contact-name">
+              PLACE_HOLDER
+            </p>
+
+            <div class="contact-details">
+
+              <p class="contact-detail">
+                <strong>Email</strong>
+
+                <a href="mailto:YOUR_EMAIL_ADDRESS">
+                  YOUR_EMAIL_ADDRESS
+                </a>
+              </p>
+
+              <p class="contact-detail">
+                <strong>Phone</strong>
+
+                <a href="tel:+17050000000">
+                  (705) 000-0000
+                </a>
+              </p>
+
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="button"
+                href="mailto:YOUR_EMAIL_ADDRESS">
+                Send Email
+              </a>
+
+              <a
+                class="button button-outline"
+                href="tel:+17050000000">
+                Call
+              </a>
+            </div>
+
+          </section>
+          -->
+
+          <!--
+          ==================================================
+          VOLUNTEER COORDINATOR
+
+          Remove the opening and closing comment markers
+          around this section when the information is ready.
+          ==================================================
+
+          <section
+            class="contact-card"
+            aria-labelledby="volunteer-coordinator-heading">
+
+            <h2 id="volunteer-coordinator-heading">
+              Volunteer Coordinator
+            </h2>
+
+            <p class="contact-name">
+              PLACE_HOLDER
+            </p>
+
+            <div class="contact-details">
+
+              <p class="contact-detail">
+                <strong>Email</strong>
+
+                <a href="mailto:YOUR_EMAIL_ADDRESS">
+                  YOUR_EMAIL_ADDRESS
+                </a>
+              </p>
+
+              <p class="contact-detail">
+                <strong>Phone</strong>
+
+                <a href="tel:+17050000000">
+                  (705) 000-0000
+                </a>
+              </p>
+
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="button"
+                href="mailto:YOUR_EMAIL_ADDRESS">
+                Send Email
+              </a>
+
+              <a
+                class="button button-outline"
+                href="tel:+17050000000">
+                Call
+              </a>
+            </div>
+
+          </section>
+          -->
+
         </div>
 
-        <aside class="contact-note">
+        <section
+          class="contact-guidance"
+          aria-labelledby="contact-guidance-heading">
+
+          <h2 id="contact-guidance-heading">
+            Not sure who to contact?
+          </h2>
+
           <p>
-            The 1st Sault Ste. Marie Scout Group is operated by volunteers.
-            Please allow reasonable time for someone to respond.
+            Contact the Group Commissioner. They can answer general questions
+            or direct your inquiry to the appropriate volunteer.
           </p>
-        </aside>
+
+          <div class="contact-actions">
+            <a
+              class="button"
+              href="mailto:YOUR_EMAIL_ADDRESS">
+              Email the Group Commissioner
+            </a>
+          </div>
+
+        </section>
+
+        <p class="response-note">
+          Our Scout Group is operated by volunteers. Please allow a reasonable
+          amount of time for someone to respond, particularly during camps,
+          holidays and major group events.
+        </p>
+
       </div>
 
       <aside class="sidebar">
@@ -308,46 +497,5 @@ Copy this block when adding another contact.
 
 <script src="js/main.js"></script>
 
-<!--
-
-==================================================
-CONTACT CARD TEMPLATE
-Copy this block when adding another contact.
-==================================================
-
-<section class="contact-option">
-
-    <h2>ROLE</h2>
-
-    <p><strong>Name:</strong> PLACE_HOLDER</p>
-
-    <p>
-        <strong>Email:</strong>
-        <a href="mailto:EMAIL">
-            EMAIL
-        </a>
-    </p>
-
-    <p>
-        <strong>Phone:</strong>
-        <a href="tel:+1##########">
-            PHONE
-        </a>
-    </p>
-
-    <div class="contact-actions">
-        <a class="button" href="mailto:EMAIL">
-            Send Email
-        </a>
-
-        <a class="button button-outline" href="tel:+1##########">
-            Call
-        </a>
-    </div>
-
-</section>
-
--->
-  
 </body>
 </html>
