@@ -3,27 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact the 1st Sault Ste. Marie Scout Group.">
+
+  <meta
+    name="description"
+    content="Contact the 1st Sault Ste. Marie Scout Group by email or telephone.">
+
   <title>Contact | 1st Sault Ste. Marie Scout Group</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=20260720-2">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/site.css?v=20260721-1">
+
+  <style>
+    .contact-options {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .contact-option {
+      padding: 1.75rem;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 0.75rem;
+    }
+
+    .contact-option h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.35rem;
+    }
+
+    .contact-option p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .contact-value {
+      display: block;
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-note {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      background: rgba(0, 0, 0, 0.04);
+      border-left: 0.3rem solid currentColor;
+    }
+
+    .contact-note p {
+      margin: 0;
+    }
+
+    @media (min-width: 700px) {
+      .contact-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
 </head>
+
 <body>
- 
+
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="utility-bar">
   <div class="container utility-inner">
-    <a href="https://scoutstracker.ca/" target="_blank" rel="noopener noreferrer">ScoutsTracker</a>
-    <a href="contact.html" aria-current="page">Contact the group</a>
+    <a
+      href="https://scoutstracker.ca/"
+      target="_blank"
+      rel="noopener noreferrer">
+      ScoutsTracker
+    </a>
+
+    <a href="contact.html" aria-current="page">
+      Contact the group
+    </a>
   </div>
 </div>
 
 <header class="site-header">
   <div class="container header-row">
-    <a class="brand" href="index.html" aria-label="1st Sault Ste. Marie Scout Group home">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="1st Sault Ste. Marie Scout Group home">
       <strong>1st Sault Ste. Marie Scout Group</strong>
     </a>
 
@@ -33,6 +106,7 @@
       type="button"
       aria-expanded="false"
       aria-controls="siteNav">
+
       <span aria-hidden="true">☰</span>
       <span class="sr-only">Open navigation menu</span>
     </button>
@@ -44,83 +118,139 @@
       <a href="parents.html">Parents</a>
       <a href="uniforms.html">Uniforms</a>
       <a href="volunteer.html">Volunteer</a>
-      <a href="contact.html">Contact</a>
-      <a class="button button-small button-gold" href="https://www.myscouts.ca/join" target="_blank" rel="noopener noreferrer">Join Now</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+
+      <a
+        class="button button-small button-gold"
+        href="https://www.myscouts.ca/join"
+        target="_blank"
+        rel="noopener noreferrer">
+        Join Now
+      </a>
     </nav>
+
   </div>
 </header>
 
 <main id="main">
 
-<section class="page-hero">
-  <div class="container">
-    <p class="kicker">Contact us</p>
-    <h1>Start a<br>conversation</h1>
-    <p>
-      Ask about registration, sections, volunteering, events or community
-      partnerships.
-    </p>
-  </div>
-</section>
+  <section class="page-hero">
+    <div class="container">
+      <p class="kicker">Contact us</p>
 
-<section class="section">
-  <div class="container content-shell">
-    <div>
-      <div class="section-heading">
-        <p class="eyebrow">Send a message</p>
-        <h2>How can we help?</h2>
+      <h1>Speak with<br>our group</h1>
+
+      <p>
+        Contact a member of the 1st Sault Ste. Marie Scout Group with questions
+        about registration, volunteering, meetings or group activities.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-shell">
+
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Contact information</p>
+          <h2>Choose how you would like to reach us</h2>
+
+          <p>
+            Use the email address or phone number below to contact someone from
+            the group directly.
+          </p>
+        </div>
+
+        <div class="contact-options">
+
+          <section class="contact-option" aria-labelledby="email-heading">
+            <h2 id="email-heading">Email</h2>
+
+            <p>
+              Send an email for registration questions, volunteering inquiries
+              or general information.
+            </p>
+
+            <a
+              class="contact-value"
+              href="mailto:YOUR_EMAIL_ADDRESS">
+              YOUR_EMAIL_ADDRESS
+            </a>
+
+            <a
+              class="button"
+              href="mailto:YOUR_EMAIL_ADDRESS">
+              Send an email
+            </a>
+          </section>
+
+          <section class="contact-option" aria-labelledby="phone-heading">
+            <h2 id="phone-heading">Telephone</h2>
+
+            <p>
+              Call or text the group contact using the phone number below.
+            </p>
+
+            <a
+              class="contact-value"
+              href="tel:+17050000000">
+              705-000-0000
+            </a>
+
+            <a
+              class="button"
+              href="tel:+17050000000">
+              Call now
+            </a>
+          </section>
+
+        </div>
+
+        <aside class="contact-note">
+          <p>
+            The 1st Sault Ste. Marie Scout Group is operated by volunteers.
+            Please allow reasonable time for someone to respond.
+          </p>
+        </aside>
       </div>
 
-      <form id="contactForm" class="contact-form">
-        <div class="form-row">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </div>
+      <aside class="sidebar">
+        <h2>Quick links</h2>
 
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-        </div>
+        <a
+          href="https://www.myscouts.ca/join"
+          target="_blank"
+          rel="noopener noreferrer">
+          Join the group
+        </a>
 
-        <div class="field">
-          <label for="topic">Topic</label>
-          <select id="topic" name="topic">
-            <option>Youth registration</option>
-            <option>Volunteering</option>
-            <option>Parent question</option>
-            <option>Community partnership</option>
-            <option>General question</option>
-          </select>
-        </div>
+        <a href="sections.html">
+          View sections
+        </a>
 
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
+        <a href="volunteer.html">
+          Volunteer
+        </a>
 
-        <button class="button" type="submit">Send message</button>
-        <p id="formStatus" class="notice" role="status" hidden></p>
-      </form>
+        <a
+          href="https://scoutstracker.ca/"
+          target="_blank"
+          rel="noopener noreferrer">
+          ScoutsTracker
+        </a>
+      </aside>
+
     </div>
-
-    <aside class="sidebar">
-      <h2>Quick links</h2>
-      <a href="https://www.myscouts.ca/join" target="_blank" rel="noopener noreferrer">Join the group</a>
-      <a href="sections.html">View sections</a>
-      <a href="volunteer.html">Volunteer</a>
-      <a href="https://scoutstracker.ca/" target="_blank" rel="noopener noreferrer">ScoutsTracker</a>
-    </aside>
-  </div>
-</section>
+  </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="container footer-main">
+
     <div>
       <h2>1st Sault Ste. Marie Scout Group</h2>
+
       <p>
         Local Scouting built around outdoor adventure, youth leadership,
         practical skills and community.
@@ -138,9 +268,24 @@
 
     <div>
       <h3>Member links</h3>
-      <a href="https://scoutstracker.ca/" target="_blank" rel="noopener noreferrer">ScoutsTracker</a>
-      <a href="https://www.myscouts.ca/join" target="_blank" rel="noopener noreferrer">Join our group</a>
-      <a href="contact.html">Contact us</a>
+
+      <a
+        href="https://scoutstracker.ca/"
+        target="_blank"
+        rel="noopener noreferrer">
+        ScoutsTracker
+      </a>
+
+      <a
+        href="https://www.myscouts.ca/join"
+        target="_blank"
+        rel="noopener noreferrer">
+        Join our group
+      </a>
+
+      <a href="contact.html">
+        Contact us
+      </a>
     </div>
 
     <div>
@@ -151,11 +296,17 @@
       <a href="venturers.html">Venturers</a>
       <a href="rovers.html">Rovers</a>
     </div>
+
   </div>
 
   <div class="container footer-bottom">
-    <span>© <span id="year"></span> 1st Sault Ste. Marie Scout Group</span>
-    <span>Designed for accessibility and easy maintenance.</span>
+    <span>
+      © <span id="year"></span> 1st Sault Ste. Marie Scout Group
+    </span>
+
+    <span>
+      Designed for accessibility and easy maintenance.
+    </span>
   </div>
 </footer>
 
